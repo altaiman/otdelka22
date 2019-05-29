@@ -1,4 +1,4 @@
-include ../global.pug
+include ../../global.pug
 
 mixin head(data)
   meta(charset="UTF-8")
@@ -6,6 +6,7 @@ mixin head(data)
   title= global.title + ' ' + global.separator + ' ' + data.title
   link(rel="stylesheet" href="css/style.css")
   link(rel="icon" type="image/x-icon" href="favicon.ico")
+  link(href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet")
   - if (global.template.adaptive)
     meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
   - else

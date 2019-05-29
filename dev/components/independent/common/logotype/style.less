@@ -1,9 +1,11 @@
 .logotype {
   display: block;
-  margin: 0 auto;
-  width: 121px;
+  margin: 0;
+  max-width: 100%;
+  width: 200px;
   height: 60px;
-  transition: all .16s;
+  color: @colorHighlight;
+  transition: all @transition;
 
   svg,
   img {
@@ -14,11 +16,10 @@
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 2px @colorHighlight;
   }
-}
 
-.logotype_side {
-  .positionCenter-X();
-  bottom: -16px;
+  &:hover,
+  &:focus {
+    opacity: .7;
+  }
 }

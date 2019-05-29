@@ -1,0 +1,32 @@
+include ../../global.pug
+include ../common/logotype/logotype.pug
+include nav/nav.pug
+
+mixin header(data)
+  +b.HEADER.header
+    +e.container.container
+      +e.block
+        +logotype
+        
+      +e.block._nav
+        +nav([
+          'Главная',
+          'Пункт 1',
+          'Пункт 2',
+          'Пункт 3',
+          'Пункт 4',
+          'Пункт 5'
+        ])
+        
+      +e.block._call
+        +link({
+          name: '8-800-2000-800',
+          href: 'tel:88002000800'
+        })
+        +button({
+          type: 'button',
+          name: 'Заказать звонок',
+          size: 's'
+        })
+        
+    

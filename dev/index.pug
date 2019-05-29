@@ -1,11 +1,5 @@
 //- includes
-include components/head/index.pug
-include components/svg/index.pug
-
-include components/header/index.pug
-include components/common/index.pug
-include components/footer/index.pug
-include components/footer/scripts.pug
+include components/independent/index.pug
 
 //- end includes
 
@@ -27,9 +21,7 @@ html(lang=global.lang)
 		
 		+e.MAIN.content
 			+b.container
-				h1 ОТДЕЛка 222 !!!!!
-				p <strong style="font-size: 102px">Званите Все Здэлаемм <br> <a href="tel:88002000600">8-800-2000-600</a></strong>
-
+			
 		+footer
 		
 		+scripts

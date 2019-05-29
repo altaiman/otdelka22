@@ -1,0 +1,6 @@
+mixin nav(data)
+  +b.NAV.nav
+    +e.UL.list
+      each item in data
+        +e.LI.item
+          +e.A.link(href="#")= item

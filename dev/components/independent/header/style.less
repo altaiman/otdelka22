@@ -1,0 +1,32 @@
+@import url('nav/style.less');
+
+.header {
+  position: relative;
+  z-index: 3;
+  padding: 24px 0;
+  color: @colorTextLight;
+  background: rgba(255,255,255,.05);
+  border-bottom: 1px solid rgba(255,255,255,.25);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__block {
+    width: 20%;
+  }
+
+  &__block_nav {
+    width: 60%;
+  }
+
+  &__block_call {
+    text-align: right;
+    
+    .link {
+      margin: 0 0 8px;
+    }
+  }
+}
