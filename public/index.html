@@ -57,7 +57,55 @@
       </div>
     </header>
     <main class="page__content" role="main">
-      <div class="container">
+      <div class="slider" data-slider="banner">
+        <div class="slider__controls" data-slider-controls="data-slider-controls">
+          <button class="arrow arrow_prev" data-slider-controls-prev="data-slider-controls-prev">
+            <svg>
+              <use xlink:href="img/symbols.svg#svg-ico-arrow"></use>
+            </svg>
+          </button>
+          <button class="arrow arrow_next" data-slider-controls-next="data-slider-controls-next">
+            <svg>
+              <use xlink:href="img/symbols.svg#svg-ico-arrow"></use>
+            </svg>
+          </button>
+        </div>
+        <ul class="slider__list" data-slider-slides="data-slider-slides">
+          <li class="slider__slide">
+            <div class="slide">
+              <div class="slide__background"><img src="pictures/slides/slide.jpg"/>
+              </div>
+              <div class="slide__content">
+                <h2 class="title">Заебись отделка!
+                </h2>
+                <div class="slide__text">
+                  <p>100 хуев в подарок</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="slider__slide">
+            <div class="slide">
+              <div class="slide__background"><img src="pictures/slides/slide2.png"/>
+              </div>
+              <div class="slide__content">
+                <h2 class="title">Я - девушка
+                </h2>
+                <div class="slide__text">
+                  <p>Вожу пальцами по воздуху</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="slider__slide">
+            <div class="slide">
+              <div class="slide__background"><img src="pictures/slides/slide.jpg"/>
+              </div>
+              <div class="slide__content">
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </main>
     <footer class="footer">

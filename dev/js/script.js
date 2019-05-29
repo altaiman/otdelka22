@@ -5,10 +5,12 @@
   scrollTo()
 
   const sliderOptions = {
-    'items': {
-      cellAlign: 'left',
+    'banner': {
+      cellAlign: 'center',
       pageDots: false,
       prevNextButtons: false,
+      wrapAround: true,
+      contain: true
     }
   }
 
@@ -25,11 +27,7 @@
           controlsNext = controls.querySelector('[data-slider-controls-next]'),
           controlsEndIndex = slidesCount - slidesCapacity,
           adaptive = Number(slider.dataset.sliderAdaptive),
-          windowWidth = window.innerWidth,
-          progressBar = slider.querySelector('[data-slider-progress]'),
-          progressStep = Math.round(100 / (slidesCount-slidesCapacity+1))
-
-    progressBar.style.width = `${progressStep}%`
+          windowWidth = window.innerWidth
 
     if (slidesCount > slidesCapacity) {
       slider.classList.add('slider_initial')
@@ -48,149 +46,142 @@
             flkty.next()
           })
 
-        if (flkty.selectedIndex === 0) {
-          controlsPrev.disabled = true
-        } else if (flkty.selectedIndex === controlsEndIndex) {
-          controlsNext.disabled = true
-        }
-
-        flkty.on('select', (index) => {
-          let progressCurrent = parseInt(progressBar.style.left) || 0
-
-          controlsPrev.disabled = (index == 0) ? true : false
-          controlsNext.disabled = (index == controlsEndIndex) ? true : false
-
-          progressBar.style.left = `${progressStep*index}%`
-        })
-
-        flkty.on('change', (index) => {
-          if (index >= controlsEndIndex) {
-            flkty.select(controlsEndIndex)
-          }
-        })
+        // if (!sliderData.wrapAround) {
+        //   if (flkty.selectedIndex === 0) {
+        //     controlsPrev.disabled = true
+        //   } else if (flkty.selectedIndex === controlsEndIndex) {
+        //     controlsNext.disabled = true
+        //   }
+        //
+        //   flkty.on('change', (index) => {
+        //     if (index >= controlsEndIndex) {
+        //       flkty.select(controlsEndIndex)
+        //     }
+        //   })
+        // }
       }
     }
   })
 
-  // drop
-
-  document.addEventListener('click', (e) => {
-    const drop = document.querySelector('[data-drop-state="1"]')
-
-    if (drop && !e.target.closest('.drop.show') && !e.target.closest('[data-drop-state="1"]')) {
-      e.preventDefault()
-      drop.click()
-    }
-
-  })
-
-  document.querySelectorAll('[data-drop]').forEach((drop, i) => {
-    drop.addEventListener('click', (e) => {
-      e.preventDefault()
-
-      const data = drop.dataset.drop,
-            dropContent = document.querySelector(`[data-drop-content="${data}"]`),
-            state = Number(drop.dataset.dropState)
-
-      switch (state) {
-        case 0:
-          dropContent.classList.add('show')
-          break
-        case 1:
-          dropContent.classList.remove('show')
-          break
-      }
-
-      drop.dataset.dropState = Number(!state)
-
-    })
-
-    drop.addEventListener('keydown', (e) => {
-      if (e.keyCode === 13) {
-        e.preventDefault()
-        e.target.click()
-      }
-    })
-  })
-
-  // rating
-
-  document.querySelectorAll('.rating').forEach((rating, i) => {
-    const value = Number(rating.querySelector('[data-stars]').dataset.stars)
-
-    rating.querySelectorAll('.star').forEach((star, k) => {
-      if (k < value) {
-        star.classList.add('star_fill')
-      }
-    })
-  })
-
-  function prevAll(element) {
-    var result = [];
-
-    while (element = element.previousElementSibling)
-        result.push(element);
-    return result;
-  }
-
-  function nextAll(element) {
-    var result = [];
-
-    while (element = element.nextElementSibling)
-        result.push(element);
-    return result;
-  }
-
-  function starFocus(star) {
-    star.classList.add('star_hover')
-
-    prevAll(star).forEach((el, k) => {
-      el.classList.add('star_hover')
-    })
-
-    nextAll(star).forEach((el, k) => {
-      el.classList.remove('star_hover')
-    })
-  }
-
-  document.querySelectorAll('.star').forEach((star, i) => {
-    star.addEventListener('mouseenter', (e) => {
-      starFocus(star)
-    })
-
-    star.addEventListener('focus', (e) => {
-      starFocus(star)
-    })
-
-    star.addEventListener('mouseleave', (e) => {
-      document.querySelectorAll('.star_hover').forEach((el, k) => {
-        el.classList.remove('star_hover')
-      })
-    })
-
-    star.addEventListener('click', (e) => {
-      e.preventDefault()
-      star.classList.add('star_fill')
-
-      prevAll(star).forEach((el, k) => {
-        el.classList.add('star_fill')
-      })
-
-      nextAll(star).forEach((el, k) => {
-        el.classList.remove('star_fill')
-      })
-    })
-
-    star.addEventListener('keydown', (e) => {
-      if (e.keyCode === 13) {
-        e.preventDefault()
-        star.click()
-      }
-    })
-  })
+  // // drop
+  //
+  // document.addEventListener('click', (e) => {
+  //   const drop = document.querySelector('[data-drop-state="1"]')
+  //
+  //   if (drop && !e.target.closest('.drop.show') && !e.target.closest('[data-drop-state="1"]')) {
+  //     e.preventDefault()
+  //     drop.click()
+  //   }
+  //
+  // })
+  //
+  // document.querySelectorAll('[data-drop]').forEach((drop, i) => {
+  //   drop.addEventListener('click', (e) => {
+  //     e.preventDefault()
+  //
+  //     const data = drop.dataset.drop,
+  //           dropContent = document.querySelector(`[data-drop-content="${data}"]`),
+  //           state = Number(drop.dataset.dropState)
+  //
+  //     switch (state) {
+  //       case 0:
+  //         dropContent.classList.add('show')
+  //         break
+  //       case 1:
+  //         dropContent.classList.remove('show')
+  //         break
+  //     }
+  //
+  //     drop.dataset.dropState = Number(!state)
+  //
+  //   })
+  //
+  //   drop.addEventListener('keydown', (e) => {
+  //     if (e.keyCode === 13) {
+  //       e.preventDefault()
+  //       e.target.click()
+  //     }
+  //   })
+  // })
+  //
+  // // rating
+  //
+  // document.querySelectorAll('.rating').forEach((rating, i) => {
+  //   const value = Number(rating.querySelector('[data-stars]').dataset.stars)
+  //
+  //   rating.querySelectorAll('.star').forEach((star, k) => {
+  //     if (k < value) {
+  //       star.classList.add('star_fill')
+  //     }
+  //   })
+  // })
+  //
+  // function prevAll(element) {
+  //   var result = [];
+  //
+  //   while (element = element.previousElementSibling)
+  //       result.push(element);
+  //   return result;
+  // }
+  //
+  // function nextAll(element) {
+  //   var result = [];
+  //
+  //   while (element = element.nextElementSibling)
+  //       result.push(element);
+  //   return result;
+  // }
+  //
+  // function starFocus(star) {
+  //   star.classList.add('star_hover')
+  //
+  //   prevAll(star).forEach((el, k) => {
+  //     el.classList.add('star_hover')
+  //   })
+  //
+  //   nextAll(star).forEach((el, k) => {
+  //     el.classList.remove('star_hover')
+  //   })
+  // }
+  //
+  // document.querySelectorAll('.star').forEach((star, i) => {
+  //   star.addEventListener('mouseenter', (e) => {
+  //     starFocus(star)
+  //   })
+  //
+  //   star.addEventListener('focus', (e) => {
+  //     starFocus(star)
+  //   })
+  //
+  //   star.addEventListener('mouseleave', (e) => {
+  //     document.querySelectorAll('.star_hover').forEach((el, k) => {
+  //       el.classList.remove('star_hover')
+  //     })
+  //   })
+  //
+  //   star.addEventListener('click', (e) => {
+  //     e.preventDefault()
+  //     star.classList.add('star_fill')
+  //
+  //     prevAll(star).forEach((el, k) => {
+  //       el.classList.add('star_fill')
+  //     })
+  //
+  //     nextAll(star).forEach((el, k) => {
+  //       el.classList.remove('star_fill')
+  //     })
+  //   })
+  //
+  //   star.addEventListener('keydown', (e) => {
+  //     if (e.keyCode === 13) {
+  //       e.preventDefault()
+  //       star.click()
+  //     }
+  //   })
+  // })
 
   // select
-  $('select').niceSelect();
+  // $('select').niceSelect();
 
   // select
   // document.querySelectorAll('select').forEach((select, i) => {

@@ -5,16 +5,30 @@
   z-index: 3;
 
   &__main {
+    position: relative;
+    overflow: hidden;
     padding: 24px 0;
-    background: rgba(255,255,255,.05);
-    border-bottom: 1px solid rgba(255,255,255,.25);
+    color: @colorTextDark;
+    background: @colorBackgroundLight;
+
+    &::before {
+      position: absolute;
+      left: -5%;
+      top: 0;
+      width: 33%;
+      height: 100%;
+      content: '';
+      background: @colorBackgroundDark;
+      transform: skewX(-25deg);
+      border-bottom: 2px solid @colorHighlight;
+      border-right: 4px solid @colorHighlight;
+    }
   }
 
   &__botline {
     padding: 12px 0;
-    color: @colorTextDark;
-    background: @colorBackgroundLight;
-    border-bottom: 2px solid @colorHighlight;
+    background: rgba(255,255,255,.05);
+    border-bottom: 1px solid rgba(255,255,255,.25);
   }
 
   &__block {

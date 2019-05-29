@@ -1,0 +1,45 @@
+.slide {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  transform: skewX(25deg);
+
+  &__background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    img {
+      .positionCenter();
+    }
+  }
+
+  &__content {
+    position: absolute;
+    left: 10%;
+    top: 10vh;
+    padding: 24px;
+
+    & > * {
+      padding: 8px;
+      background: @colorBackgroundDark;
+    }
+  }
+
+  &__text {
+    font-size: @fontSizeCaption;
+
+    p {
+      margin: 0 0 8px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}

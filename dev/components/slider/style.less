@@ -1,0 +1,63 @@
+@import url('slide/style.less');
+
+.slider {
+  position: relative;
+
+  &__list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__slide {
+    width: @container;
+    overflow: hidden;
+    transform: skewX(-25deg);
+    opacity: .5;
+    transition: opacity @transitionX2;
+
+    &.is-selected {
+      opacity: 1;
+      border-left: 4px solid @colorHighlight;
+      border-right: 4px solid @colorHighlight;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .positionCenter();
+    z-index: 3;
+    width: 100%;
+    padding: 0 5%;
+  }
+}
+
+.arrow {
+  width: 64px;
+  height: 64px;
+  background: none;
+  border: none;
+  transition: all @transition;
+
+  svg {
+    max-width: 100%;
+    max-height: 100%;
+    fill: currentColor;;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: @colorHighlight;
+  }
+}
+
+.arrow_prev {
+  transform: scaleX(-1);
+}

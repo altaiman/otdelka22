@@ -1,5 +1,6 @@
 //- includes
 include components/independent/index.pug
+include components/slider/index.pug
 
 //- end includes
 
@@ -20,7 +21,9 @@ html(lang=global.lang)
 		})
 		
 		+e.MAIN.content
-			+b.container
+			+slider({
+				slider: 'banner'
+			})
 			
 		+footer
 		

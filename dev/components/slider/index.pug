@@ -1,0 +1,27 @@
+include data.pug
+include slide/slide.pug
+
+mixin slider(data)
+  +b.slider(data-slider=data.slider)
+    +e.controls(data-slider-controls)
+      +b.BUTTON.arrow._prev(data-slider-controls-prev)
+        +svg({
+          name: 'ico-arrow'
+        })
+      +b.BUTTON.arrow._next(data-slider-controls-next)
+        +svg({
+          name: 'ico-arrow'
+        })
+    +e.UL.list(data-slider-slides)
+      each slide in slides
+        +e.LI.slide
+          +b.slide
+            +e.background
+              img(src=global.paths.pictures+'slides/'+slide.image)
+            +e.content
+              - if (slide.title)
+                +b.H2.title= slide.title
+              - if (slide.text)
+                +e.text
+                  p= slide.text
+        
