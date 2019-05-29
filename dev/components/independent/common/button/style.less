@@ -22,7 +22,8 @@
     display: block;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: @colorHighlight;
     background: @colorBackgroundLight;
     box-shadow: inset 0 0 0 2px currentColor;
@@ -30,9 +31,6 @@
 
   &:focus {
     outline: none;
-    color: @colorHighlight;
-    background: @colorBackgroundLight;
-    box-shadow: inset 0 0 0 2px currentColor;
   }
 
   &:active {

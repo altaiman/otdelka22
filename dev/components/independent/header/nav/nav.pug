@@ -1,6 +1,6 @@
 mixin nav(data)
-  +b.NAV.nav
+  +b.NAV.nav(class=data.style ? '_'+data.style : '')
     +e.UL.list
-      each item in data
+      each item in data.nav
         +e.LI.item
           +e.A.link(href="#")= item

@@ -4,29 +4,44 @@ include nav/nav.pug
 
 mixin header(data)
   +b.HEADER.header
-    +e.container.container
-      +e.block
-        +logotype
-        
-      +e.block._nav
-        +nav([
-          'Главная',
-          'Пункт 1',
-          'Пункт 2',
-          'Пункт 3',
-          'Пункт 4',
-          'Пункт 5'
-        ])
-        
-      +e.block._call
-        +link({
-          name: '8-800-2000-800',
-          href: 'tel:88002000800'
-        })
-        +button({
-          type: 'button',
-          name: 'Заказать звонок',
-          size: 's'
-        })
-        
+    +e.main
+      +e.container.container._flex
+        +e.block
+          +logotype
+          
+        +e.block._nav
+          +nav({
+            style: 'main',
+            nav: [
+              'Главная',
+              'О компании',
+              'Акции',
+              'Отзывы',
+              'Калькулятор'
+            ]
+          })
+          
+    +e.botline
+      +e.container.container._flex
+        +e.block._nav
+          +nav({
+            nav: [
+              'Виды ремонта',
+              'Портфолио',
+              'Прайс',
+              'Услуги',
+              'Контакты'
+            ]
+          })
+        +e.block._call
+          +link({
+            name: '8-800-2000-800',
+            href: 'tel:88002000800'
+          })
+          +button({
+            type: 'button',
+            name: 'Заказать звонок',
+            size: 's'
+          })
+          
     

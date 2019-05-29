@@ -1,15 +1,31 @@
 .link {
+  position: relative;
   display: inline-block;
   vertical-align: bottom;
   margin: 0 8px;
-  font-weight: 500;
+  font-weight: 600;
   color: @colorLink;
   text-decoration: none;
-  transition: all .16s;
+  transition: all @transition;
+
+  &::before {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    padding: 0;
+    content: '';
+    background: currentColor;
+    transition: all @transitionX2;
+  }
 
   &:hover,
   &:focus {
-    color: @colorTextLight;
+    &::before {
+      padding: 0 50%;
+    }
   }
 
   &:focus {
