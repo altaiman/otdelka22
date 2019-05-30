@@ -145,13 +145,72 @@ input[type=number] {
 	}
 }
 
-.component {
-	margin: 50px auto;
+.list {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	width: 100%;
+	margin: 0 0 16px;
+	padding: 0;
+	list-style: none;
 
-	&__line {
-		margin: 0 0 20px;
+	&__item {
+		position: relative;
+		display: block;
+		margin: 0 0 8px;
 	}
 }
+
+.list_decor {
+	& > .list {
+		&__item {
+			padding-left: 20px;
+
+			&::before {
+				position: absolute;
+				left: 0;
+				top: 8px;
+				content: '';
+				width: 10px;
+				height: 2px;
+				background: @colorHighlight;
+			}
+		}
+	}
+}
+
+.list_inline {
+	flex-direction: row;
+}
+
+.list_quad {
+	& > .list {
+		&__item {
+			width: 25%;
+		}
+	}
+}
+
+.list_triple {
+	justify-content: center;
+
+	& > .list {
+		&__item {
+			width: 33.333%;
+		}
+	}
+}
+
+.list_double {
+	justify-content: space-between;
+	
+	& > .list {
+		&__item {
+			width: calc(~'50% - 10px');
+		}
+	}
+}
+
 
 /* global */
 

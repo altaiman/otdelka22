@@ -1,7 +1,65 @@
 include ../../global.pug
+include ../common/logotype/logotype.pug
 include scripts.pug
 
 mixin footer
   +b.FOOTER.footer
     +e.container.container._flex
+      +e.block
+        +logotype
+      +e.block
+        +b.UL.list
+          +e.LI.item
+            +link({
+              href: '#',
+              name: 'Главная'
+            })
+          +e.LI.item
+            +link({
+              href: '#',
+              name: 'О компании'
+            })
+          +e.LI.item
+            +link({
+              href: '#',
+              name: 'Акции'
+            })
+          +e.LI.item
+            +link({
+              href: '#',
+              name: 'Отзывы'
+            })
+          +e.LI.item
+            +link({
+              href: '#',
+              name: 'Калькулятор'
+            })
+            
+        +b.UL.list
+          +e.LI.item
+            +link({
+              href: '#',
+              name: 'Виды ремонта'
+            })
+          +e.LI.item
+            +link({
+              href: '#',
+              name: 'Портфолио'
+            })
+          +e.LI.item
+            +link({
+              href: '#',
+              name: 'Прайс'
+            })
+          +e.LI.item
+            +link({
+              href: '#',
+              name: 'Услуги'
+            })
+          +e.LI.item
+            +link({
+              href: '#',
+              name: 'Контакты'
+            })
+      +e.block
     

@@ -1,0 +1,26 @@
+include field/field.pug
+
+mixin formCall
+  +b.FORM.form._call
+    +b.SPAN.caption._size-s Бесплатный замер
+    +e.content._inline
+      +e.block
+        +field({
+          type: 'text',
+          placeholder: 'Ваше имя',
+          size: 'full'
+        })
+        
+      +e.block
+        +field({
+          type: 'text',
+          placeholder: 'Номер телефона',
+          size: 'full'
+        })
+        
+      +e.block  
+        +button({
+          type: 'button',
+          name: 'Отправить',
+          size: 'full'
+        })

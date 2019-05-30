@@ -1,0 +1,61 @@
+mixin prices
+  +b.SECTION.section._light
+    +e.container.container
+      +e.title
+        +b.H2.title._centered Цены на комплексный ремонт в Барнауле
+      +b.UL.list._inline._triple
+        +pricesItem
+        +pricesItem
+        +pricesItem
+        
+        
+mixin pricesItem
+  +e.LI.item
+    +b.block._price
+      +e.head
+        +e.SPAN.title._center
+          strong Ремонт офиса
+      +e.line
+        +b.price
+          +e.value
+            span от 1800 ₽ кв.м
+          +e.value._old
+            span 2700 ₽ кв.м
+      +e.content
+        +b.UL.list._decor
+          +e.LI.item
+            span Демонтажные работы
+          +e.LI.item
+            span Грунтовка поверхностей
+          +e.LI.item
+            span Шпатлевка стен и потолка
+          +e.LI.item
+            span Покраска потолка
+          +e.LI.item
+            span Оклейка стен обоями
+          +e.LI.item
+            span Выравнивание пола
+          +e.LI.item
+            span Настил ламината
+          +e.LI.item
+            span Монтаж панелей в ванной
+          +e.LI.item
+            span Установка сантехники
+          +e.LI.item
+            span Замена розеток
+          +e.LI.item
+            span Монтаж выключателей
+        
+        +e.buttons
+          +button({
+            type: 'button',
+            name: 'Подробнее',
+            style: 0,
+            size: 'full'
+          })
+          
+          +button({
+            type: 'button',
+            name: 'Заказать',
+            size: 'full'
+          })

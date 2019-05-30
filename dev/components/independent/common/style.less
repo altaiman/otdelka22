@@ -13,6 +13,17 @@
   text-align: center;
 }
 
+.title_beauty {
+  font-family: @fontCaption, sans-serif;
+  letter-spacing: 20px;
+  font-size: 80px;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.25);
+  font-weight: 900;
+  margin: 0 0 40px;
+}
+
 .caption {
   display: block;
   margin: 0 0 16px;
@@ -39,38 +50,4 @@
   margin: 0 0 8px;
   .fontLabel();
   color: @colorTextGray;
-}
-
-.tag {
-  display: flex;
-  align-items: center;
-  font-size: @fontSizeDefaultS;
-  font-weight: 500;
-  color: @colorTextGray;
-
-  &__ico {
-    position: relative;
-    width: 16px;
-    height: 16px;
-    margin: 0 5px;
-
-    &:first-child {
-      margin-left: 0;
-    }
-
-    &:last-child {
-      margin-right: 0;
-    }
-
-    svg {
-      fill: @colorText;
-    }
-
-    svg,
-    img {
-      .positionCenter();
-      max-width: 100%;
-      max-height: 100%;
-    }
-  }
 }

@@ -1,0 +1,6 @@
+mixin field(data)
+  +b.LABEL.field(class=data.size ? '_size-' : '')
+    - if (data.name)
+      +b.SPAN.subcaption= data.name
+    +e.DIV.input
+      input(type=data.text placeholder=data.placeholder)

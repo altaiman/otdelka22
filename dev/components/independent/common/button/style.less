@@ -2,7 +2,7 @@
   display: inline-flex;
   align-items: center;
   vertical-align: bottom;
-  margin: 0 8px;
+  margin: 0 8px 8px;
   padding: 0 16px;
   height: 40px;
   font-size: @fontSizeButton;
@@ -43,17 +43,18 @@
 
   &:last-child {
     margin-right: 0;
+    margin-bottom: 0;
   }
 }
 
 .button_light {
-  color: @colorTextGray;
+  color: @colorHighlight;
   background: @colorBackgroundLight;
-  box-shadow: inset 0 0 0 2px @colorBorder;
+  box-shadow: inset 0 0 0 2px @colorHighlight;
 
   &:hover {
-    color: @colorHighlight;
-    box-shadow: inset 0 0 0 2px currentColor;
+    color: @colorTextDark;
+    box-shadow: inset 0 0 0 2px @colorHighlight;
   }
 }
 
@@ -84,4 +85,6 @@
   display: block;
   padding: 0;
   width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }

@@ -1,0 +1,23 @@
+mixin examples
+  +b.SECTION.section._light
+    +e.container.container
+      +e.title
+        +b.H2.title._centered Примеры работ
+      +b.portfolio
+        +e.main
+          +b.UL.list._inline._double
+            +e.LI.item
+              +examplesItem
+            +e.LI.item
+              +examplesItem
+            +e.LI.item
+              +examplesItem
+            +e.LI.item
+              +examplesItem
+        +e.side
+          +examplesItem
+          
+mixin examplesItem
+  +b.work
+    +e.image
+      img(src='https://picsum.photos/800/800' alt="Работа")
