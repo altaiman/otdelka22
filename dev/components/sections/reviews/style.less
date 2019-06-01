@@ -1,0 +1,99 @@
+.review {
+  position: relative;
+  display: flex;
+  color: @colorTextDark;
+  max-width: 700px;
+  margin: 0 0 40px;
+
+  &:nth-child(2n) {
+    .review {
+      &__image {
+        right: -64px;
+        left: auto;
+        box-shadow:
+          0 0 0 4px #069ee2,
+          -10px 10px 0 0 rgba(0,0,0,.5);
+      }
+
+      &__content {
+        padding: 16px 176px 16px 32px;
+      }
+
+      &__header {
+        right: 16px;
+        left: auto;
+      }
+    }
+  }
+
+  &:hover {
+    .review {
+      &__image {
+        transform: skewX(-15deg) scale(1.05);
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    width: 200px;
+    height: 120px;
+    transform: skewX(-15deg);
+    overflow: hidden;
+    background: @colorBackgroundLight;
+    transition: all @transitionX2;
+    transform-origin: center;
+    box-shadow:
+      0 0 0 4px #069ee2,
+      10px 10px 0 0 rgba(0,0,0,.5);
+
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%) skewX(15deg);
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    margin-top: 80px;
+    margin-left: 40px;
+    padding: 16px 32px 16px 176px;
+    width: 100%;
+    line-height: 1.4;
+    background: @colorBackgroundLight;
+    box-shadow:
+      0 0 0 4px #069ee2,
+      10px 10px 0 0 rgba(0,0,0,.5);
+  }
+
+  &__header {
+    position: absolute;
+    left: 16px;
+    top: 56px;
+  }
+
+  &__title {
+    display: block;
+    font-family: @fontCaption;
+    color: @colorHighlight;
+  }
+
+  &__text {
+    font-size: 14px;
+    text-align: justify;
+
+    p {
+      margin: 0 0 8px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}

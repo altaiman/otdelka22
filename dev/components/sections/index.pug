@@ -1,3 +1,19 @@
+include data.pug
 include feautures.pug
-include prices.pug
-include examples.pug
+include prices/prices.pug
+include examples/examples.pug
+include reviews/reviews.pug
+
+mixin section(data)
+  - if (data.type == 'dark')
+    +b.SECTION.section
+      +e.container.container
+        +e.title
+          +b.H2.title._beauty= data.title
+        block
+  - else
+    +b.SECTION.section._light
+      +e.container.container
+        +e.title
+          +b.H2.title._centered= data.title
+        block

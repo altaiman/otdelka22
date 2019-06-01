@@ -63,6 +63,22 @@
     }
   })
 
+  // modal
+
+  // $('[data-modal]').fancybox({
+  //   modal: true
+  // })
+  $('[data-modal-open]').on('click', (e) => {
+    const data = $(e.target).closest('[data-modal-open]').data('modalOpen'),
+          modal = $(`[data-modal="${data}"]`)
+
+    $.fancybox.open(modal, {
+      modal: true,
+      autoFocus: false,
+      animationEffect: 'fade'
+    })
+  })
+
   // // drop
   //
   // document.addEventListener('click', (e) => {

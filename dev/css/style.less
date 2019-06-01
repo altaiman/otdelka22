@@ -179,6 +179,26 @@ input[type=number] {
 	}
 }
 
+.list_reviews {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+
+	& > * {
+		position: relative;
+		left: -10%;
+		width: 100%;
+		margin-bottom: -40px;
+
+		&:nth-child(2n) {
+			left: auto;
+			right: -10%;
+		}
+	}
+}
+
 .list_inline {
 	flex-direction: row;
 }
@@ -203,7 +223,7 @@ input[type=number] {
 
 .list_double {
 	justify-content: space-between;
-	
+
 	& > .list {
 		&__item {
 			width: calc(~'50% - 10px');

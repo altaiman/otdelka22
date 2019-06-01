@@ -325,25 +325,25 @@
             <div class="portfolio__main">
               <ul class="list list_inline list_double">
                 <li class="list__item">
-                  <div class="work">
+                  <div class="work" data-modal-open="work">
                     <div class="work__image"><img src="https://picsum.photos/800/800" alt="Работа"/>
                     </div>
                   </div>
                 </li>
                 <li class="list__item">
-                  <div class="work">
+                  <div class="work" data-modal-open="work">
                     <div class="work__image"><img src="https://picsum.photos/800/800" alt="Работа"/>
                     </div>
                   </div>
                 </li>
                 <li class="list__item">
-                  <div class="work">
+                  <div class="work" data-modal-open="work">
                     <div class="work__image"><img src="https://picsum.photos/800/800" alt="Работа"/>
                     </div>
                   </div>
                 </li>
                 <li class="list__item">
-                  <div class="work">
+                  <div class="work" data-modal-open="work">
                     <div class="work__image"><img src="https://picsum.photos/800/800" alt="Работа"/>
                     </div>
                   </div>
@@ -351,7 +351,7 @@
               </ul>
             </div>
             <div class="portfolio__side">
-              <div class="work">
+              <div class="work" data-modal-open="work">
                 <div class="work__image"><img src="https://picsum.photos/800/800" alt="Работа"/>
                 </div>
               </div>
@@ -359,7 +359,80 @@
           </div>
         </div>
       </section>
+      <section class="section">
+        <div class="section__container container">
+          <div class="section__title">
+            <h2 class="title title_beauty">Отзывы
+            </h2>
+          </div>
+          <ul class="list list_reviews">
+            <li class="review"> 
+              <div class="review__image"><img src="pictures/reviews/man.jpg"/>
+              </div>
+              <div class="review__content">
+                <div class="review__header"><span class="review__title">Корней</span>
+                </div>
+                <div class="review__main">
+                  <div class="review__text">
+                    <p>Купил 2 сосиски в тесте. Одну съел, во время рекламы надкусил вторую и посмотрел во внутрь, плесень от сосиски тянулась к стенкам оболочки, сделал фото, видно даже чёрные точки. Я деньги заплатил за плесень, которую бомжи едят бесплатно.</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="review"> 
+              <div class="review__image"><img src="pictures/reviews/man2.jpg"/>
+              </div>
+              <div class="review__content">
+                <div class="review__header"><span class="review__title">Коныч</span>
+                </div>
+                <div class="review__main">
+                  <div class="review__text">
+                    <p>Если вас привлекает атмосфера стройки и вы бы хотели покурить кальян сидя на диванчике, который раньше был собственностью бездомных людей, то кальянная &quot;Lounge на фольге&quot; - это то, что вам нужно</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="review"> 
+              <div class="review__image"><img src="pictures/reviews/man.jpg"/>
+              </div>
+              <div class="review__content">
+                <div class="review__header"><span class="review__title">Корней</span>
+                </div>
+                <div class="review__main">
+                  <div class="review__text">
+                    <p>Купил 2 сосиски в тесте. Одну съел, во время рекламы надкусил вторую и посмотрел во внутрь, плесень от сосиски тянулась к стенкам оболочки, сделал фото, видно даже чёрные точки. Я деньги заплатил за плесень, которую бомжи едят бесплатно.</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
+    <div class="page__modals">
+      <div class="modal modal_full" data-modal="work">
+        <button class="modal__close" data-fancybox-close="data-fancybox-close">
+        </button>
+        <div class="work-full">
+          <div class="work-full__image"><img src="https://picsum.photos/800/800" alt="Работа"/>
+          </div>
+          <div class="work-full__content"><span class="title title_size-s">Ремонт 2-комнатной квартиры</span>
+            <div class="work-full__text">
+              <p><strong>АДРЕС: </strong><span>Кременчугская ул., 21-3</span></p>
+              <p>
+                В квартире (новостройка) выполнен капитальный ремонт в скандинавском стиле. 
+                Полностью разведена сантехника и электрика - как черновая, так и финишная. 
+                На полу - укладка ламинированной доски и керамогранита, в кухонной зоне 
+                произведена укладка керамогранита "под паркет", все стены выровнены по 
+                маякам для поклейки обоев под окраску. В санузле - перегородки ГКЛ с 
+                окрашиванием + вставки из кафельной плитки. Во всей квартире матовые 
+                натяжные потолки со встроенными светильниками и ГКЛ-коробами.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer class="footer">
       <div class="footer__container container container_flex">
         <div class="footer__block"><a class="logotype" href="index.html" title="Отделка 22"><img src="img/logotype.svg" alt="Отделка 22"/></a>

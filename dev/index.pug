@@ -3,6 +3,7 @@ include components/independent/index.pug
 include components/slider/index.pug
 include components/sections/index.pug
 include components/form/index.pug
+include components/modal/index.pug
 
 //- end includes
 
@@ -29,7 +30,10 @@ html(lang=global.lang)
 			+feautures
 			+prices
 			+examples
+			+reviews
 			
+		+e.modals
+			+modalWork
 			
 		+footer
 		
