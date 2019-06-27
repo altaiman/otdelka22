@@ -5,7 +5,10 @@
 @import url('@{pluginsPath}/jquery.fancybox.min.less');
 
 .modal {
+  width: 800px;
+  padding: 25px;
   color: @colorTextDark;
+  box-shadow: 0 0 0 20px @colorHighlight;
 
   &__close {
     position: absolute;
@@ -39,6 +42,13 @@
       transform: scale(1.5);
       color: @colorTextDark;
     }
+  }
+
+  &__title {
+    display: block;
+    padding: 0 25px;
+    margin: 0 0 50px;
+    text-align: center;
   }
 }
 

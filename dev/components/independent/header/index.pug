@@ -38,10 +38,7 @@ mixin header(data)
             name: '8-800-2000-800',
             href: 'tel:88002000800'
           })
-          +button({
-            type: 'button',
-            name: 'Заказать звонок',
-            size: 's'
-          })
+          +b.BUTTON.button._size-s(data-modal-open="action")
+            span Заказать звонок
           
     

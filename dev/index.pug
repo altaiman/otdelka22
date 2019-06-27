@@ -27,13 +27,59 @@ html(lang=global.lang)
 			+slider({
 				slider: 'banner'
 			})
-			+feautures
-			+prices
-			+examples
+			
+			+section({
+				title: 'РЕМОНТ КВАРТИР'
+			})
+				+e.text._border
+					p. 
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+						when an unknown printer took a galley of type and scrambled it to make a 
+						type specimen book. It has survived not only five centuries, but also 
+						the leap into electronic typesetting, remaining essentially unchanged. 
+						It was popularised in the 1960s with the release of Letraset sheets 
+						containing Lorem Ipsum passages, and more recently with desktop 
+						publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+					p. 
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+						when an unknown printer took a galley of type and scrambled it to make a 
+						type specimen book. It has survived not only five centuries, but also 
+						the leap into electronic typesetting, remaining essentially unchanged. 
+						It was popularised in the 1960s with the release of Letraset sheets 
+						containing Lorem Ipsum passages, and more recently with desktop 
+						publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						
+			+b.SECTION.section._full(style="background-image: url(https://www.beloe-oblako.ru/upload/uf/a3b/a3bef803c0344b6c88be24a241ef43dd.jpg)")
+				+e.A.link(href="#")
+				+e.container.container
+					+e.block
+						+b.H2.title._stl-2._hover Натяжные потолки
+						+b.H2.title._stl-2 от 999 руб.
+						
+			+b.SECTION.section._full(style="background-image: url(https://mrsremont.ru/images/slides/slide04.jpg)")
+				+e.A.link(href="#")
+				+e.container.container
+					+e.block._right
+						+b.H2.title._stl-2._hover Ремонт квартир
+						+b.H2.title._stl-2 от 2 999 руб.
+						
+			+b.SECTION.section._full(style="background-image: url(https://servex.su/upload/iblock/d0a/d0a7974bbac420e55e0a1510d6ee3332.jpg)")
+				+e.A.link(href="#")
+				+e.container.container
+					+e.block
+						+b.H2.title._stl-2._hover Клининг
+						+b.H2.title._stl-2 от 499 руб.
+			
+			//- +feautures
+			//- +prices
+			//- +examples
 			+reviews
 			
 		+e.modals
 			+modalWork
+			+modalAction
 			
 		+footer
 		

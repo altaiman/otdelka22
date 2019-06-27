@@ -1,0 +1,13 @@
+include action.pug
+
+mixin modalAction
+  +b.modal(data-modal="action")
+    +e.BUTTON.close(data-fancybox-close)
+    +e.title
+      +b.SPAN.caption НЕ УХОДИТЕ ОТ НАС ТАК БЫСТРО
+      +b.SPAN.subtitle ТОЛЬКО СЕГОДНЯ!
+    +e.content
+      +action
+          
+        
+      

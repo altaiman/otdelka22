@@ -3,7 +3,31 @@
 @import url('reviews/style.less');
 
 .section {
-	padding: 50px 0 100px;
+	padding: 50px 0;
+
+	&__link {
+		position: absolute;
+		z-index: 3;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		color: currentColor;
+		text-decoration: none;
+		opacity: 0;
+
+		&:hover {
+			& + .section__container {
+				.title_hover {
+					color: @colorHighlight;
+				}
+			}
+		}
+	}
+
+	&__block_right {
+		text-align: right;
+	}
 
   &__title {
     margin: 0 0 50px;
@@ -11,16 +35,23 @@
 
 	&__text {
 		margin: 40px 0;
-		font-size: 24px;
-		text-align: center;
+		font-size: 18px;
+		// text-align: center;
 
 		p {
-			margin: 0 0 8px;
+			margin: 0 0 24px;
 
 			&:last-child {
 				margin-bottom: 0;
 			}
 		}
+	}
+
+	&__text_border {
+		padding: 40px;
+		box-shadow:
+	    0 0 0 4px @colorHighlight,
+	    15px 15px 0 0 rgba(0,0,0,.5);
 	}
 }
 
@@ -33,6 +64,22 @@
   & + .section_light {
     border-top: none;
   }
+}
+
+.section_full {
+	position: relative;
+	height: 440px;
+	margin-bottom: 40px;
+
+	&::before {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		content: '';
+		background: rgba(0,0,0,.5);
+	}
 }
 
 .block {
