@@ -1,0 +1,44 @@
+mixin profit
+  +b.SECTION.section
+    +e.container.container
+      +b.H2.title._beauty
+        span Ваши выгоды
+
+      +e.text._center
+        p Заключи договор на установку натяжных потолков, Вы гарантированно <br>получаете скидку в магазинах партнеров до -30%
+
+      +b.UL.list._inline._five
+        +e.LI.item
+          +b.profit
+            +e.image
+              img(src="http://7nebopotolok.ru/design/img/partners-discount/1.png" alt="Kerama Marazzi")
+            +e.title
+              span Kerama Marazzi <strong>-15%</strong>
+        +e.LI.item
+          +b.profit
+            +e.image
+              img(src="http://7nebopotolok.ru/design/img/partners-discount/2.png" alt="Kerama Marazzi")
+            +e.title
+              span Формула М2 до <strong>-20%</strong>
+        +e.LI.item
+          +b.profit
+            +e.image
+              img(src="http://7nebopotolok.ru/design/img/partners-discount/3.png" alt="Kerama Marazzi")
+            +e.title
+              span Российский кафель <strong>-10%</strong>
+        +e.LI.item
+          +b.profit
+            +e.image
+              img(src="http://7nebopotolok.ru/design/img/partners-discount/4.png" alt="Kerama Marazzi")
+            +e.title
+              span Граф <strong>-30%</strong>
+        +e.LI.item
+          +b.profit
+            +e.image
+              img(src="http://7nebopotolok.ru/design/img/partners-discount/5.png" alt="Kerama Marazzi")
+            +e.title
+              span Дверидоff <strong>-10%</strong>
+              
+      +e.submit
+        +b.BUTTON.button._size-l._size-wide(data-modal-open="callback")
+          span Получить скидку в магазине

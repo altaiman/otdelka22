@@ -1,0 +1,53 @@
+//- includes
+include components/independent/index.pug
+include components/slider/index.pug
+include components/sections/index.pug
+include components/form/index.pug
+include components/modal/index.pug
+
+//- end includes
+
+//- variables page 
+- 
+	pageSettings = {
+		title: 'Главная'
+	}
+	
+//- end variables
+
+doctype html
+html(lang=global.lang)
+	+head(pageSettings)
+	+b.BODY.page
+		+header({
+			title: pageSettings.title
+		})
+		
+		+e.MAIN.content
+			+section({
+				title: 'РЕМОНТ КВАРТИР'
+			})
+				+e.text._border
+					p. 
+						Компания предоставляет полный комплекс услуг по ремонту и дизайну квартир. 
+					p. 
+						Основная задача – максимально облегчить процесс ремонта для клиента. 
+						Нужно выбрать один из трех вариантов стилей дизайна, одну из трех 
+						предложенных планировок, выбрать желаемый уровень отделки по стоимости, 
+						и вы получите итоговую стоимость ремонта своей квартиры
+
+			
+			+prices
+			+feautures
+			+reviews
+			
+			+b.SECTION.section
+				+e.container.container
+					+formCallFooter
+			
+		+e.modals
+			+modalCallback
+			
+		+footer
+		
+		+scripts

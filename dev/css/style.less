@@ -55,7 +55,20 @@ input[type=number] {
 	}
 
 	&__content {
+		position: relative;
 		overflow: hidden;
+
+		&::before {
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			background-image: url('../img/bricks-bg.jpg');
+			background-repeat: repeat;
+			opacity: .17;
+		}
 	}
 
 	&__side {
@@ -161,6 +174,10 @@ input[type=number] {
 	}
 }
 
+.list_prices {
+	margin: 0 0 80px;
+}
+
 .list_decor {
 	& > .list {
 		&__item {
@@ -220,6 +237,42 @@ input[type=number] {
 		}
 	}
 }
+
+.list_quad {
+	justify-content: center;
+	margin: 0 0 60px;
+
+	& > .list {
+		&__item {
+			width: calc(~'25% - 23px');
+			margin: 0 15px;
+
+			&:nth-child(1),
+			&:nth-child(4n + 5) {
+				margin-left: 0;
+			}
+
+			&:nth-child(4n),
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+.list_five {
+	flex-wrap: nowrap;
+	justify-content: center;
+	margin: 80px 0 40px;
+
+	& > .list {
+		&__item {
+			width: calc(~'20% - 10px');
+			margin: 0 10px;
+		}
+	}
+}
+
 
 .list_double {
 	justify-content: space-between;

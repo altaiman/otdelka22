@@ -1,26 +1,45 @@
+include section.pug
+include data.pug
+
 mixin prices
   +b.SECTION.section._light
     +e.container.container
       +e.title
         +b.H2.title._centered Цены на комплексный ремонт в Барнауле
-      +b.UL.list._inline._triple
-        +pricesItem
-        +pricesItem
-        +pricesItem
+      +b.UL.list._inline._triple._prices
+        +pricesItem({
+          name: 'Ремонт квартиры',
+          price: [1200, 3000]
+        })
+        +pricesItem({
+          name: 'Ремонт офиса',
+          price: [1500, 3300]
+        })
+        +pricesItem({
+          name: 'Ремонт коттеджа',
+          price: [2500, 4500]
+        })
+        
+      +e.text
+        p. 
+          Уважаемые наши клиенты, если Вы не нашли то что искали, остались вопросы или Вам необходим весьма значительный объем работ, то позвоните нам по телефону: +7 913 242 86 15, +7 933 310 86 69 или оставьте заявку, мы всегда договоримся!
+        p. 
+          <i>*Цены на ремонт действительны в течении текущего месяца и не являются публичной офертой.</i>
+
         
         
-mixin pricesItem
+mixin pricesItem(data)
   +e.LI.item
     +b.block._price
       +e.head
         +e.SPAN.title._center
-          strong Ремонт офиса
+          strong= data.name
       +e.line
         +b.price
           +e.value
-            span от 1800 ₽ кв.м
+            span= 'от ' + data.price[0] + ' ₽ кв.м'
           +e.value._old
-            span 2700 ₽ кв.м
+            span= 'от ' + data.price[1] + ' ₽ кв.м'
       +e.content
         +b.UL.list._decor
           +e.LI.item
@@ -48,14 +67,12 @@ mixin pricesItem
         
         +e.buttons
           +button({
-            type: 'button',
+            type: 'link',
             name: 'Подробнее',
             style: 0,
-            size: 'full'
+            size: 'full',
+            href: 'appartament-prices.html'
           })
           
-          +button({
-            type: 'button',
-            name: 'Заказать',
-            size: 'full'
-          })
+          +b.BUTTON.button._size-full(data-modal-open="callback")
+            span Заказать

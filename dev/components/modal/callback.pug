@@ -1,0 +1,29 @@
+mixin modalCallback
+  +b.modal._size-s(data-modal="callback")
+    +e.BUTTON.close(data-fancybox-close)
+    +e.title
+      +b.SPAN.caption ВВЕДИТЕ ДАННЫЕ В 1 КЛИК 
+      +b.SPAN.subtitle ПЕРЕЗВОНИМ В ТЕЧЕНИИ 10 МИНУТ
+    +e.content
+      +b.FORM.form
+        +e.content
+          +e.block._full
+            +field({
+              type: 'text',
+              placeholder: 'Ваше имя',
+              size: 'full'
+            })
+            
+          +e.block._full
+            +field({
+              type: 'text',
+              placeholder: 'Номер телефона',
+              size: 'full'
+            })
+            
+          +e.block._full
+            +button({
+              type: 'button',
+              name: 'Отправить',
+              size: 'full'
+            })

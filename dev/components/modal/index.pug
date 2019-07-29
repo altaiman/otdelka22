@@ -1,4 +1,5 @@
 include action/index.pug
+include callback.pug
 
 mixin modalWork
   +b.modal._full(data-modal="work")
@@ -21,3 +22,52 @@ mixin modalWork
             маякам для поклейки обоев под окраску. В санузле - перегородки ГКЛ с 
             окрашиванием + вставки из кафельной плитки. Во всей квартире матовые 
             натяжные потолки со встроенными светильниками и ГКЛ-коробами.
+
+mixin modalWitem
+  +b.modal._item(data-modal="w-item")
+    +e.BUTTON.close._fix(data-fancybox-close)
+    +e.content._flex
+      +e.block
+        +b.w-item-modal
+          +e.title
+            span Натяжной потолок 12 м2
+          +e.price
+            span 3990 руб.
+          +e.image
+            img(src="https://picsum.photos/id/742/400/300")
+          +b.cost
+            +e.UL.list
+              +e.LI.item
+                span Глянец белый
+                span 12 м2
+                span 2400 р.
+              +e.LI.item
+                span Профиль по периметру
+                span 12,5 м
+                span 1250 р.
+              +e.LI.item
+                span Закладная под люстру
+                span 1 шт.
+                span 399 р.
+                
+      +e.block._highlight
+        +e.title
+          +b.SPAN.caption._size-l <strong>Понравился потолок?</strong>
+          +b.SPAN.caption Закажите прямо сейчас
+        +b.FORM.form
+          +e.text
+            p Оставьте свои контактные данные и мы свяжемся с Вами в ближайшее время
+          +e.content
+            +e.block._full
+              +b.LABEL.field._size-l._size-full
+                +e.DIV.input
+                  input(type='text' placeholder='Ваше имя')
+              
+            +e.block._full
+              +b.LABEL.field._size-l._size-full
+                +e.DIV.input
+                  input(type='text' placeholder='Номер телефона')
+              
+            +e.block._full
+              +b.BUTTON.button._light._size-l._size-full
+                span Заказать подобный потолок

@@ -1,0 +1,137 @@
+//- includes
+include components/independent/index.pug
+include components/slider/index.pug
+include components/sections/index.pug
+include components/form/index.pug
+include components/modal/index.pug
+
+//- end includes
+
+//- variables page 
+- 
+	pageSettings = {
+		title: 'Главная'
+	}
+	
+//- end variables
+
+doctype html
+html(lang=global.lang)
+	+head(pageSettings)
+	+b.BODY.page
+		+header({
+			title: pageSettings.title
+		})
+		
+		+e.MAIN.content
+			+section({
+				title: 'НАТЯЖНЫЕ ПОТОЛКИ'
+			})
+				+e.text._border
+					p. 
+						Компания предоставляет полный комплекс услуг по ремонту и дизайну квартир. 
+					p. 
+						Основная задача – максимально облегчить процесс ремонта для клиента. 
+						Нужно выбрать один из трех вариантов стилей дизайна, одну из трех 
+						предложенных планировок, выбрать желаемый уровень отделки по стоимости, 
+						и вы получите итоговую стоимость ремонта своей квартиры
+
+			+b.SECTION.section
+				+e.container.container
+					+b.H2.title
+						span Примеры натяжных потолков, которые мы можем установить уже завтра
+					+e.text
+						p. 
+							Ознакомьтесь с типовыми натяжными потолками, которые мы чаще всего 
+							устанавливаем. Мы надеемся этот список, поможет Вам сориентироваться 
+							по точной или приблизительной стоимости Вашего потолка.
+					
+					+b.UL.list._inline._quad
+						+e.LI.item
+							+b.w-item
+								+e.image(data-modal-open="w-item")
+									img(src="https://picsum.photos/id/742/255/255" alt="Потолок")
+								+e.info
+									+e.name 
+										span Потолок на кухню
+									+e.descr
+										p Натяжной потолок 12 м2
+									+e.price
+										+b.price
+											+e.value._old
+												span 5150 ₽
+											+e.value._now
+												span 3990 ₽
+									+b.BUTTON.button._size-full(data-modal-open="w-item")
+										span Подробнее
+						+e.LI.item
+							+b.w-item
+								+e.image(data-modal-open="w-item")
+									img(src="https://picsum.photos/id/742/255/255" alt="Потолок")
+								+e.info
+									+e.name 
+										span Потолок на кухню
+									+e.descr
+										p Натяжной потолок 12 м2
+									+e.price
+										+b.price
+											+e.value._old
+												span 5150 ₽
+											+e.value._now
+												span 3990 ₽
+									+b.BUTTON.button._size-full(data-modal-open="w-item")
+										span Подробнее
+						+e.LI.item
+							+b.w-item
+								+e.image(data-modal-open="w-item")
+									img(src="https://picsum.photos/id/742/255/255" alt="Потолок")
+								+e.info
+									+e.name 
+										span Потолок на кухню
+									+e.descr
+										p Натяжной потолок 12 м2
+									+e.price
+										+b.price
+											+e.value._old
+												span 5150 ₽
+											+e.value._now
+												span 3990 ₽
+									+b.BUTTON.button._size-full(data-modal-open="w-item")
+										span Подробнее
+						+e.LI.item
+							+b.w-item
+								+e.image(data-modal-open="w-item")
+									img(src="https://picsum.photos/id/742/255/255" alt="Потолок")
+								+e.info
+									+e.name 
+										span Потолок на кухню
+									+e.descr
+										p Натяжной потолок 12 м2
+									+e.price
+										+b.price
+											+e.value._old
+												span 5150 ₽
+											+e.value._now
+												span 3990 ₽
+									+b.BUTTON.button._size-full(data-modal-open="w-item")
+										span Подробнее
+										
+					
+					+e.submit
+						+b.BUTTON.button._size-l._size-wide(data-modal-open="callback")
+							span Вызов замерщика
+			
+			+profit
+			+reviews
+			
+			+b.SECTION.section
+				+e.container.container
+					+formCallFooter
+			
+		+e.modals
+			+modalCallback
+			+modalWitem
+			
+		+footer
+		
+		+scripts

@@ -1,0 +1,42 @@
+.table-page {
+  &__caption {
+    font-size: 20px;
+  }
+
+  &__block {
+    margin: 0 0 40px;
+  }
+}
+
+.table {
+  width: 100%;
+  font-size: 16px;
+
+  &__row {
+    transition: all .2s;
+    border-bottom: 1px solid #ffffff;
+
+    &:hover {
+      background: @colorHighlight;
+    }
+  }
+
+  &__cell {
+    padding: 12px;
+  }
+}
+
+.table_price {
+  .table {
+    &__cell {
+      &:nth-child(1) {
+        width: 70%;
+        font-weight: bold;
+      }
+
+      &:nth-child(2) {
+        width: 30%;
+      }
+    }
+  }
+}

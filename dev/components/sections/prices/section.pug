@@ -1,0 +1,21 @@
+mixin section-prices
+  +b.SECTION.section
+    +e.container.container
+      +e.title
+        +b.H2.title._size-s
+          span СТОИМОСТЬ НА РЕМОНТ КВАРТИР И ОТДЕЛОЧНЫЕ РАБОТЫ В БАРНАУЛЕ НА 2019 ГОД
+      +b.table-page
+        each item in dataPrices
+          +e.block
+            +b.SPAN.caption= item.name
+            +b.TABLE.table._price
+              +e.TBODY.body
+                each price in item.items
+                  +e.TR.row
+                    +e.TD.cell
+                      span= price.name
+                    +e.TD.cell
+                      span= price.price
+      +e.submit
+        +b.BUTTON.button(data-modal-open="callback")
+          span Оставить заявку
