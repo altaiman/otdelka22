@@ -12,26 +12,41 @@ mixin header(data)
         +e.block._nav
           +nav({
             style: 'main',
-            nav: [
-              'Главная',
-              'О компании',
-              'Акции',
-              'Отзывы',
-              'Калькулятор'
-            ]
+            nav: [{
+              name: 'Главная',
+              link: 'index.html'
+            },{
+              name: 'Натяжные потолки',
+              link: 'ceiling.html'
+            },{
+              name: 'Ремонт квартир',
+              link: 'appartament.html'
+            },{
+              name: 'Клининг',
+              link: 'clining.html'
+            }]
           })
           
     +e.botline
       +e.container.container._flex
         +e.block._nav
           +nav({
-            nav: [
-              'Виды ремонта',
-              'Портфолио',
-              'Прайс',
-              'Услуги',
-              'Контакты'
-            ]
+            nav: [{
+              name: 'Виды ремонта',
+              link: '#'
+            },{
+              name: 'Портфолио',
+              link: '#'
+            },{
+              name: 'Прайс',
+              link: '#'
+            },{
+              name: 'Услуги',
+              link: '#'
+            },{
+              name: 'Контакты',
+              link: '#'
+            }]
           })
         +e.block._call
           +link({

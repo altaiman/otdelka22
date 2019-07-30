@@ -11,6 +11,13 @@
       prevNextButtons: false,
       wrapAround: true,
       contain: true
+    },
+    'items': {
+      cellAlign: 'left',
+      pageDots: false,
+      prevNextButtons: false,
+      wrapAround: true,
+      contain: true
     }
   }
 

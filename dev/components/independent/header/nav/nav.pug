@@ -3,4 +3,4 @@ mixin nav(data)
     +e.UL.list
       each item in data.nav
         +e.LI.item
-          +e.A.link(href="#")= item
+          +e.A.link(href=item.link)= item.name

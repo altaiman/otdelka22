@@ -5,17 +5,18 @@ include profit.pug
 include prices/prices.pug
 include examples/examples.pug
 include reviews/reviews.pug
+include catalog.pug
 
 mixin section(data)
   - if (data.type == 'dark')
     +b.SECTION.section
       +e.container.container
         +e.title
-          +b.H2.title._beauty= data.title
+          +b.H2.title._beauty!= data.title
         block
   - else
     +b.SECTION.section._light
       +e.container.container
         +e.title
-          +b.H2.title._centered= data.title
+          +b.H2.title._centered!= data.title
         block

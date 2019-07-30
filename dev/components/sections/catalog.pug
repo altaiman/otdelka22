@@ -1,0 +1,71 @@
+mixin catalog
+  +b.SECTION.section
+    +e.container.container
+      +e.title
+        +b.H2.title
+          span Дополнительно, к натяжному потолку, в нашей компании Вы сможете заказать
+      +e.text
+        p. 
+          Помимо основного направления – установка натяжных потолков, и продажи люстр 
+          и светильников к ним, в нашей компании можно заказать пластиковые окна, ремонт 
+          балконов, жалюзи и рулонные шторы, а так же установку кондиционеров.
+          
+      +b.slider._items(data-slider='items')
+        +e.controls(data-slider-controls)
+          +b.BUTTON.arrow._prev(data-slider-controls-prev)
+            +svg({
+              name: 'ico-arrow'
+            })
+          +b.BUTTON.arrow._next(data-slider-controls-next)
+            +svg({
+              name: 'ico-arrow'
+            })
+        +e.UL.list(data-slider-slides)
+          +e.LI.slide._item
+            +b.product
+              +e.title
+                span Люстры
+              +e.image
+                img(src='http://7nebopotolok.ru/design/img/add-order/1.jpg')
+              +b.A.button._size-full(href="#")
+                span Скачать каталог
+          +e.LI.slide._item
+            +b.product
+              +e.title
+                span Светильники
+              +e.image
+                img(src='http://7nebopotolok.ru/design/img/add-order/2.jpg')
+              +b.A.button._size-full(href="#")
+                span Скачать каталог
+          +e.LI.slide._item
+            +b.product
+              +e.title
+                span LED светильники
+              +e.image
+                img(src='http://7nebopotolok.ru/design/img/add-order/7.jpg')
+              +b.A.button._size-full(href="#")
+                span Скачать каталог
+          +e.LI.slide._item
+            +b.product
+              +e.title
+                span Жалюзи и рулонные шторы
+              +e.image
+                img(src='http://7nebopotolok.ru/design/img/add-order/3.jpg')
+              +b.A.button._size-full(href="#")
+                span Скачать каталог
+          +e.LI.slide._item
+            +b.product
+              +e.title
+                span Карнизы (гардина)
+              +e.image
+                img(src='http://7nebopotolok.ru/design/img/add-order/4.jpg')
+              +b.A.button._size-full(href="#")
+                span Скачать каталог
+          +e.LI.slide._item
+            +b.product
+              +e.title
+                span Установка окон и отделка балконов
+              +e.image
+                img(src='http://7nebopotolok.ru/design/img/add-order/5.jpg')
+              +b.A.button._size-full(href="#")
+                span Скачать каталог

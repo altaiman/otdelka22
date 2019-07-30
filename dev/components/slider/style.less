@@ -8,6 +8,10 @@
     margin: 0;
     padding: 0;
     list-style: none;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   &__slide {
@@ -24,6 +28,27 @@
     }
   }
 
+  &__slide_item {
+    width: 25%;
+    padding: 0 20px;
+    opacity: 1;
+    transform: none;
+
+    &:hover {
+      .product {
+        &__image {
+          img {
+            opacity: .75;
+          }
+        }
+      }
+    }
+
+    &.is-selected {
+      border: none;
+    }
+  }
+
   &__controls {
     display: flex;
     justify-content: space-between;
@@ -32,6 +57,22 @@
     z-index: 3;
     width: 100%;
     padding: 0 5%;
+  }
+}
+
+.slider_items {
+  margin: 60px 0 40px;
+
+  .slider {
+    &__controls {
+      padding: 0;
+      width: 115%;
+    }
+
+    &__list {
+      position: relative;
+      overflow: hidden;
+    }
   }
 }
 
